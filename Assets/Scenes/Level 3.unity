@@ -188,7 +188,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.5626556, y: 1}
+    m_SensorSize: {x: 0.56267804, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6105,7 +6105,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.5626556, y: 1}
+    m_SensorSize: {x: 0.56267804, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -8948,6 +8948,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5820348578680035827, guid: 87553f8b4bd1cb8439554d9dd7ef9dd2, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
     - target: {fileID: 7068380431809985030, guid: 87553f8b4bd1cb8439554d9dd7ef9dd2, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -9104,11 +9108,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8072802721277019304, guid: 87553f8b4bd1cb8439554d9dd7ef9dd2, type: 3}
   m_PrefabInstance: {fileID: 1075346474}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1075346476 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7068380433433251212, guid: 87553f8b4bd1cb8439554d9dd7ef9dd2, type: 3}
-  m_PrefabInstance: {fileID: 1075346474}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1075346477 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7068380433082364731, guid: 87553f8b4bd1cb8439554d9dd7ef9dd2, type: 3}
@@ -9119,26 +9118,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7566075818671538312, guid: 87553f8b4bd1cb8439554d9dd7ef9dd2, type: 3}
   m_PrefabInstance: {fileID: 1075346474}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1075346479
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1075346476}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!1001 &1090469418
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9238,7 +9217,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092861609}
-  m_LocalRotation: {x: 0.34366104, y: 0.000000014901161, z: -0.000000022351742, w: 0.93909377}
+  m_LocalRotation: {x: 0.34366107, y: -0.000000029802322, z: 0.000000022351742, w: 0.93909377}
   m_LocalPosition: {x: -0.0000029291898, y: 0.000008766683, z: -0.000010185286}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9283,7 +9262,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.5626556, y: 1}
+    m_SensorSize: {x: 0.56267804, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -9314,7 +9293,7 @@ PrefabInstance:
     - target: {fileID: 5288803675509605762, guid: 5dd8e523f35cf3147b3aa469392264d9, type: 3}
       propertyPath: _blackScreenCanvas
       value: 
-      objectReference: {fileID: 1099296882}
+      objectReference: {fileID: 0}
     - target: {fileID: 5288803675509605765, guid: 5dd8e523f35cf3147b3aa469392264d9, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -9367,11 +9346,6 @@ PrefabInstance:
     - {fileID: 5288803675509605761, guid: 5dd8e523f35cf3147b3aa469392264d9, type: 3}
     - {fileID: 5288803675509605763, guid: 5dd8e523f35cf3147b3aa469392264d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5dd8e523f35cf3147b3aa469392264d9, type: 3}
---- !u!223 &1099296882 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 2707323145838064572, guid: 5dd8e523f35cf3147b3aa469392264d9, type: 3}
-  m_PrefabInstance: {fileID: 1099296881}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1099296883 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5288803675509605765, guid: 5dd8e523f35cf3147b3aa469392264d9, type: 3}
@@ -10253,7 +10227,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 0.5626556, y: 1}
+    m_SensorSize: {x: 0.56267804, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -14086,6 +14060,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5820348578680035827, guid: 87553f8b4bd1cb8439554d9dd7ef9dd2, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
     - target: {fileID: 7068380431809985030, guid: 87553f8b4bd1cb8439554d9dd7ef9dd2, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -14406,11 +14384,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8072802721277019304, guid: 87553f8b4bd1cb8439554d9dd7ef9dd2, type: 3}
   m_PrefabInstance: {fileID: 1830234772}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1830234774 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7068380433433251212, guid: 87553f8b4bd1cb8439554d9dd7ef9dd2, type: 3}
-  m_PrefabInstance: {fileID: 1830234772}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1830234775 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7068380433082364731, guid: 87553f8b4bd1cb8439554d9dd7ef9dd2, type: 3}
@@ -14421,26 +14394,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7566075818671538312, guid: 87553f8b4bd1cb8439554d9dd7ef9dd2, type: 3}
   m_PrefabInstance: {fileID: 1830234772}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1830234777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830234774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
 --- !u!4 &1832247271 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2603205488387913571, guid: 95b4089f336e3e84b856c23feb65de27, type: 3}

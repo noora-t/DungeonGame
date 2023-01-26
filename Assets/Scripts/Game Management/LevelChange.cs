@@ -8,12 +8,12 @@ using UnityEngine.UI;
 
 public class LevelChange : MonoBehaviour
 {
-    [SerializeField] string _nextLevel;
-    [SerializeField] Canvas _blackScreenCanvas;
-    [SerializeField] Canvas _levelCompleteCanvas;
-    [SerializeField] TMP_Text _coinsAmount;
     [SerializeField] ItemCollection _itemCollection;
     [SerializeField] ItemType _coin;
+
+    GameObject _blackScreenCanvas;
+    GameObject _levelCompleteCanvas;
+    TMP_Text _coinsAmount;
 
     //void Start()
     //{
@@ -49,10 +49,16 @@ public class LevelChange : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<PlayerMovement>().DisableMovement();
-            _blackScreenCanvas.gameObject.SetActive(true);
+            _blackScreenCanvas = GameObject.Find("Black Screen");
+            _levelCompleteCanvas = GameObject.Find("Level Complete");
+
+            foreach (Transform child in _blackScreenCanvas.transform)
+            {
+                child.gameObject.SetActive(true);
+            }
+
             StartCoroutine(DarkenScreen(20f));
-            Invoke("Stats", 3f);
-            Invoke("ChangeLevel", 10f);           
+            Invoke("Stats", 3f);        
         }     
     }
 
@@ -81,10 +87,16 @@ public class LevelChange : MonoBehaviour
 
     void Stats()
     {
-        _blackScreenCanvas.gameObject.SetActive(false);
-        _levelCompleteCanvas.gameObject.SetActive(true);
+        foreach (Transform child in _blackScreenCanvas.transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+
+        foreach (Transform child in _levelCompleteCanvas.transform)
+        {
+            child.gameObject.SetActive(true);
+        }
+        _coinsAmount = GameObject.Find("Level Coin Amount").GetComponent<TMP_Text>();
         _coinsAmount.SetText(_itemCollection.CountOf(_coin).ToString());
     }
-
-    void ChangeLevel() => SceneManager.LoadScene(_nextLevel);
 }

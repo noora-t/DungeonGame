@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DefeatMenu : MonoBehaviour
+public class MenuSelect : MonoBehaviour
 {
     [SerializeField] GameObject _defeatMenuObjects;
-    [SerializeField] GameObject _touchInputCanvas;
+    [SerializeField] GameObject _levelCompleteObjects;
+
+    int lastLevel = 3;
+
+    GameObject _touchInputCanvas;
 
     void Start()
     {
@@ -29,6 +33,7 @@ public class DefeatMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         _defeatMenuObjects.SetActive(false);
+        _levelCompleteObjects.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
@@ -36,5 +41,13 @@ public class DefeatMenu : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("Main Menu");
+    }
+
+    public void NextLevel()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == lastLevel)
+            SceneManager.LoadScene(0);
+        else
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

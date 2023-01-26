@@ -8,25 +8,34 @@ public class MainMenu : MonoBehaviour
 {
     [SerializeField] GameObject _continueButton;
 
-    GameData _gameData;
+    GameData _gameData = new GameData();
 
     void Start()
     {
-        _gameData = ReadGameData();
+        ReadGameData();
 
         if (_gameData.Level != 0 && _gameData.Level != 1)
-            _continueButton.SetActive(true);
+            _continueButton.SetActive(true); 
     }
 
-    GameData ReadGameData()
+    void ReadGameData()
     {
+        if (!File.Exists("SaveGame.json"))
+        {
+            var fs = new FileStream("SaveGame.json", FileMode.Create);
+            fs.Dispose();
+
+            NewGameData();
+        }
+            
+
         using (StreamReader streamReader = new StreamReader("SaveGame.json"))
         {
             var b64 = streamReader.ReadToEnd();
             var plaintextBytes = System.Convert.FromBase64String(b64);
             string json = System.Text.Encoding.UTF8.GetString(plaintextBytes);
 
-            return JsonUtility.FromJson<GameData>(json);
+            _gameData = JsonUtility.FromJson<GameData>(json);
         }
     }
 
@@ -37,13 +46,14 @@ public class MainMenu : MonoBehaviour
 
     public void StartNewGame()
     {
-        ClearGameData();
+        NewGameData();
         SceneManager.LoadScene("Level 1");
     }
 
-    void ClearGameData()
+    void NewGameData()
     {
         _gameData.Coins = 0;
+        _gameData.Level = 0;
 
         var json = JsonUtility.ToJson(_gameData);
         var plainTextBytes = System.Text.Encoding.UTF8.GetBytes(json);

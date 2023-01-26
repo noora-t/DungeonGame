@@ -32,17 +32,8 @@ public class GamePersist : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == 1)
             _player.ItemCollection.ClearCollection();
 
-        if (!File.Exists("SaveGame.json"))
-        {
-            var fs = new FileStream("SaveGame.json", FileMode.Create);
-            fs.Dispose();
-        }
-
         using (StreamReader streamReader = new StreamReader("SaveGame.json"))
         {
-            if (_gameData == null)
-                _gameData = new GameData();
-
             var b64 = streamReader.ReadToEnd();
             var plaintextBytes = System.Convert.FromBase64String(b64);
             string json = System.Text.Encoding.UTF8.GetString(plaintextBytes);
@@ -58,9 +49,6 @@ public class GamePersist : MonoBehaviour
 
     public void Save(bool exitGame)
     {
-        if (_gameData == null)
-            _gameData = new GameData();
-
         if (exitGame)
             _gameData.Coins = _player.CoinsBeforeLevelStart;
         else
